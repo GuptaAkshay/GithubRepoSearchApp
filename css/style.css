@@ -1,0 +1,75 @@
+body {
+  padding-top: 50px;
+}
+.navbar-brand{
+	color:#fff !important;
+}
+@media (min-width: @screen-sm-min) { 
+
+	.container{
+		width: 90% !important;
+	}
+	.search-area {
+	  padding: 40px 15px;
+	  text-align: center;
+
+	}
+	.text-primary{
+	
+	font-weight: bold !important;
+	}
+}
+@media (min-width: @screen-lg-min) { 
+
+	.container{
+	width: 80% !important;
+	}
+	
+}
+.total-count{
+	padding-bottom: 5px;
+	border-bottom: 1px solid #eee;
+}
+
+.search-area {
+  padding: 40px 15px;
+  text-align: center;
+
+}
+.preLoader {
+    width: 1440px;
+    height: 770px;
+    background-color:  #337ab7;;
+    opacity: 0.85;
+    position: absolute;
+    z-index: 500;
+    top: 0;
+    height: 770px;
+}
+.loader {
+	background-size: cover;
+    position: absolute;
+    width: 231px;
+    height: 25px;
+    text-align: center;
+    margin: 355px 450px 435px 556px;
+	background: url(ajax-loader.gif)  no-repeat center center;
+}
+.text-primary{
+	
+	font-weight: bold !important;
+}
+.text-primary:hover{
+	color: #286090 !important;
+	text-decoration: underline !important;
+}
+.searched-list{
+	border-bottom: 1px solid #eee;
+}
+.repo-desc{
+	width:60%;
+}
+
+.stars-forks-lang{
+
+}

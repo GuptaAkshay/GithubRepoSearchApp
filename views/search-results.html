@@ -1,0 +1,45 @@
+<div class="row" >
+        <div class="details-container">
+            
+             <div class="col-xs-6 col-md-2">
+              
+              <!-- <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h3 class="panel-title">Filter</h3>
+                </div>
+                <div class="panel-body">
+                  
+                  <select class="form-control" ng-model="orderVal" >
+                    <option value ="">Select Sort Order</option>
+                    <option  value="asc" >Ascending</option>
+                    <option value="desc" >Decesnding</option>
+                  </select>
+                </div>
+              </div> -->
+              <div>
+              </div>
+            </div> 
+            <div class="col-xs-6 col-sm-6 col-md-8">
+              <h4 class="total-count">Matching Repository found {{totalCount}}</h4>
+              <ul class="list-unstyled">
+                <li class="searched-list" ng-repeat = 'item in searchItems'>
+                  <div class="stars-forks-lang pull-right">
+                    {{item.language}}
+                    <p class="label label-default">
+                      <span class="glyphicon glyphicon-star"></span> Star {{item.stargazers_count}}
+                    </p>&nbsp;
+                    <p class="label label-default">
+                      <span class="glyphicon glyphicon-random"></span> Fork {{item.forks_count}}
+                    </p>&nbsp;
+                    <p class="label label-default">
+                      <span class="glyphicon glyphicon-eye-open"></span> Watchers {{item.watchers}}
+                    </p>
+                  </div>
+                  <a href="{{item.html_url}}"><h3 class="text-primary">{{item.full_name}}</h3></a>
+                  <p class="repo-desc">{{item.description}}</p>
+                  <p class="last-updated">Updated On {{item.updated_at}}</p>
+                </li>
+              </ul>
+            </div>
+        </div>
+      </div>

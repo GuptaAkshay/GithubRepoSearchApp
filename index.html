@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Github Repo Search App</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular-route.js"></script>
+    <script src="https://cdn.jsdelivr.net/ngstorage/0.3.6/ngStorage.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular-animate.js"></script>
+    
+  </head>
+
+
+  <body ng-app="GithubSearchApp" ng-controller="SearchController" >
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand">Github Repo Search App</a>
+        </div>
+      </div>
+    </nav>
+    <div class="preLoader" ng-show="loderFlag">
+        <div class="loader"></div>
+      </div>
+    <div class="container"  ng-init="initPage()">
+      <div class="search-area">
+        <h3>Enter KeyWord to Search Matching Repository</h3>
+        <div class="form-inline">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Feed Me Keyword" size="70%" ng-model="searchStr">
+            </div>
+            <a class="btn btn-default" href="#/search" ng-click="searchedList();">Get Results</a>
+        </div>  
+      </div>
+      <!-- <div class="preLoader" >ng-show="loderFlag"
+        <div class="loader"></div>
+      </div> -->
+     <div ng-view></div>
+    </div><!-- /.container -->
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Modules-->
+    <script src="js/app.js"></script> 
+
+    <!-- Controllers --> 
+    <script src="js/controllers/SearchController.js"></script>
+
+    <!-- Services -->
+    <script src="js/service/searchService.js"></script>
+
+  </body>
+</html>
